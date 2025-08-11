@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPYbitech Services</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/services.css">
+        <link rel="stylesheet" href="/styles/chatbot.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -12,7 +14,7 @@
     <header class="header">
         <div class="container header-container">
             <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="SPYbitech Logo">
+                <img src="/images/logo.png" alt="SPYbitech Logo">
             </a>
             <nav class="main-nav">
                 <ul>
@@ -77,7 +79,7 @@
                         <p>Comprehensive IT infrastructure assessment, security & risk audits, compliance reviews, and IT process optimization.</p>
                         <a href="#" class="btn-get-quote">Get Quote</a>
                     </div>
-                     <div class="service-card">
+                    <div class="service-card">
                         <div class="service-icon"><i class="fas fa-cloud"></i></div>
                         <h3>Cloud Solutions</h3>
                         <p>Scalable and secure cloud computing solutions for data storage, processing, and application hosting.</p>
@@ -91,12 +93,6 @@
             <div class="container text-center">
                 <h2 class="section-title">WE OFFER THE FOLLOWING</h2>
                 <div class="design-links-grid">
-                    <a href="#" class="design-link-btn"><i class="fab fa-ui8"></i> UI8</a>
-                    <a href="#" class="design-link-btn"><i class="fab fa-gumroad"></i> Gumroad</a>
-                    <a href="#" class="design-link-btn"><i class="fab fa-dribbble"></i> Dribbble</a>
-                    <a href="#" class="design-link-btn"><i class="fab fa-instagram"></i> Instagram</a>
-                    <a href="#" class="design-link-btn"><i class="fab fa-behance"></i> Behance</a>
-                    <a href="#" class="design-link-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
                 </div>
             </div>
         </section>
@@ -123,7 +119,7 @@
                         <div class="service-icon"><i class="fas fa-server"></i></div>
                         <h3>Web Hosting</h3>
                         <p>Fast and secure web hosting services with 99.9% uptime guarantee, SSL certificates, and 24/7 technical support.</p>
-                         <ul class="features-list">
+                        <ul class="features-list">
                             <li><i class="fas fa-check-circle"></i> 99.9% Uptime</li>
                             <li><i class="fas fa-check-circle"></i> SSL Certificates</li>
                             <li><i class="fas fa-check-circle"></i> 24/7 Support</li>
@@ -135,7 +131,7 @@
                         <div class="service-icon"><i class="fas fa-globe"></i></div>
                         <h3>Domain Registration</h3>
                         <p>Register and manage domains including .com, .net, .org, .na, .edu with easy administration and auto-renewal options.</p>
-                         <ul class="features-list">
+                        <ul class="features-list">
                             <li><i class="fas fa-check-circle"></i> Multiple TLDs</li>
                             <li><i class="fas fa-check-circle"></i> Auto-Renewal</li>
                             <li><i class="fas fa-check-circle"></i> Easy Management</li>
@@ -196,34 +192,121 @@
             </div>
         </section>
 
-        <section class="section-padded domain-registration">
-            <div class="container">
+        <section class="domain-registration section-padded">
+            <div class="container text-center">
                 <h2 class="section-title">Domain Registration</h2>
-                <p class="section-description">Register your perfect domain name with competitive pricing</p>
+                <p class="section-description">Register your perfect domain name with competitive pricing.</p>
 
-                <div class="domain-grid">
-                    <div class="domain-list">
-                        <h3>Namibian Domains (NAD)</h3>
-                        <ul>
-                            <li>.na <span class="price">N$ 6,210</span><br><span class="renewal">Renewal: N$ 4,848</span></li>
-                            <li>.co.na <span class="price">N$ 1,200</span><br><span class="renewal">Renewal: N$ 744</span></li>
-                            <li>.alt.na, .edu.na <span class="price">N$ 900</span><br><span class="renewal">Renewal: N$ 582</span></li>
-                            <li>.org.na <span class="price">N$ 900</span><br><span class="renewal">Renewal: N$ 582</span></li>
-                            <li>.com.na <span class="price">N$ 912</span><br><span class="renewal">Renewal: N$ 594</span></li>
-                            <li>.net.na <span class="price">N$ 966</span><br><span class="renewal">Renewal: N$ 612</span></li>
+                <div class="domain-tables-container">
+                    <div class="domain-table">
+                        <h3>NAMIBIAN DOMAINS (NAD)</h3>
+                        <ul class="domain-list">
+                            <li>
+                                <span class="domain">.na</span>
+                                <div class="pricing-info">
+                                    <span class="price">N$ 6,210</span>
+                                    <span class="renewal">Renewal: N$ 4,848</span>
+                                </div>
+                                <button class="btn-register">Register Now</button>
+                            </li>
+                            <li>
+                                <span class="domain">.co.na</span>
+                                <div class="pricing-info">
+                                    <span class="price">N$ 1,200</span>
+                                    <span class="renewal">Renewal: N$ 744</span>
+                                </div>
+                                <button class="btn-register">Register Now</button>
+                            </li>
+                            <li>
+                                <span class="domain">.alt.na, .edu.na</span>
+                                <div class="pricing-info">
+                                    <span class="price">N$ 900</span>
+                                    <span class="renewal">Renewal: N$ 562</span>
+                                </div>
+                                <button class="btn-register">Register Now</button>
+                            </li>
+                            <li>
+                                <span class="domain">.org.na</span>
+                                <div class="pricing-info">
+                                    <span class="price">N$ 900</span>
+                                    <span class="renewal">Renewal: N$ 562</span>
+                                </div>
+                                <button class="btn-register">Register Now</button>
+                            </li>
+                            <li>
+                                <span class="domain">.com.na</span>
+                                <div class="pricing-info">
+                                    <span class="price">N$ 912</span>
+                                    <span class="renewal">Renewal: N$ 594</span>
+                                </div>
+                                <button class="btn-register">Register Now</button>
+                            </li>
+                            <li>
+                                <span class="domain">.net.na</span>
+                                <div class="pricing-info">
+                                    <span class="price">N$ 966</span>
+                                    <span class="renewal">Renewal: N$ 612</span>
+                                </div>
+                                <button class="btn-register">Register Now</button>
+                            </li>
                         </ul>
                     </div>
-                    <div class="domain-list">
-                        <h3>International Domains (NAD)</h3>
-                        <ul>
-                            <li>.com <span class="price">N$ 400</span><br><span class="markup">USD 17 + 50% markup</span></li>
-                            <li>.org <span class="price">N$ 400</span><br><span class="markup">USD 15 + 30% markup</span></li>
-                            <li>.eu <span class="price">N$ 244</span><br><span class="markup">USD 9 + 50% markup</span></li>
-                            <li>.io <span class="price">N$ 1,710</span><br><span class="markup">USD 63 + 30% markup</span></li>
-                            <li>.ai <span class="price">N$ 2,520</span><br><span class="markup">USD 93 + 50% markup</span></li>
-                            <li>.co.uk</li>
-                            <li>.ca</li>
-                            <li>.dev</li>
+
+                    <div class="domain-table">
+                        <h3>INTERNATIONAL DOMAINS (NAD)</h3>
+                        <ul class="domain-list international">
+                            <li>
+                                <span class="domain">.com</span>
+                                <div class="pricing-info">
+                                    <span class="price">N$ 400</span>
+                                    <span class="markup">USD 17 + 50% markup</span>
+                                </div>
+                                <button class="btn-register">Register Now</button>
+                            </li>
+                            <li>
+                                <span class="domain">.org</span>
+                                <div class="pricing-info">
+                                    <span class="price">N$ 400</span>
+                                    <span class="markup">USD 15 + 50% markup</span>
+                                </div>
+                                <button class="btn-register">Register Now</button>
+                            </li>
+                            <li>
+                                <span class="domain">.eu</span>
+                                <div class="pricing-info">
+                                    <span class="price">N$ 244</span>
+                                    <span class="markup">USD 9 + 50% markup</span>
+                                </div>
+                                <button class="btn-register">Register Now</button>
+                            </li>
+                            <li>
+                                <span class="domain">.io</span>
+                                <div class="pricing-info">
+                                    <span class="price">N$ 1,710</span>
+                                    <span class="markup">USD 63 + 30% markup</span>
+                                </div>
+                                <button class="btn-register">Register Now</button>
+                            </li>
+                            <li>
+                                <span class="domain">.ai</span>
+                                <div class="pricing-info">
+                                    <span class="price">N$ 2,520</span>
+                                    <span class="markup">USD 93 + 50% markup</span>
+                                </div>
+                                <button class="btn-register">Register Now</button>
+                            </li>
+                            <li>
+                                <span class="domain">.co.uk</span>
+                                <button class="btn-register inactive" disabled>Coming Soon</button>
+                            </li>
+                            <li>
+                                <span class="domain">.ca</span>
+                                <button class="btn-register inactive" disabled>Coming Soon</button>
+                            </li>
+                            <li>
+                                <span class="domain">.dev</span>
+                                <button class="btn-register inactive" disabled>Coming Soon</button>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -235,10 +318,10 @@
         <div class="container footer-grid">
             <div class="footer-col about-col">
                 <a href="#" class="logo">
-                    <img src="images/logo.png" alt="SPYbitech Logo">
+                    <img src="/images/logo.png" alt="SPYbitech Logo">
                 </a>
                 <p class="about-text">
-                    Shape up your site with Knopp, a theme especially made for fitness & gym websites.
+                    Shape up your site with SPYbitech, a theme especially made for all Websites and Software Endeavours.
                 </p>
             </div>
             <div class="footer-col">
@@ -248,8 +331,8 @@
             </div>
             <div class="footer-col">
                 <h3>LOCATION</h3>
-                <p>68 Jay Street, Brooklyn,<br>NY 11201, United States</p>
-                <p>kropp@oodeinteractive.com<br>+ (1) 718 - 407 - 6400</p>
+                <p>Unit 6, 1st Floor Independence Acarde Building,<br>Werner List Street, Windhoek</p>
+                <p>info@spybitech.com.na<br>+264 85 806 5994</p>
             </div>
             <div class="footer-col">
                 <h3>START NOW</h3>
@@ -267,9 +350,30 @@
             </div>
         </div>
         <p class="email-note">
-            PLEASE FEEL FREE TO SEND US AN E-MAIL AT KROPP@OODEINTERACTIVE.COM FOR ANY ADDITIONAL INQUIRIES
+            PLEASE FEEL FREE TO SEND US AN E-MAIL AT info@spybitech.com.na FOR ANY ADDITIONAL INQUIRIES
         </p>
     </footer>
+<div class="chatbot-container">
+    <div class="chatbot-icon" onclick="toggleChatbot()">
+        <i class="fas fa-comment-dots"></i>
+    </div>
+    <div class="chatbot-popup" id="chatbot-popup">
+        <div class="chatbot-header">
+            <img src="/images/logo.png" alt="SPYbitech Logo" style="height: 30px; margin-right: 10px;">
+            <h3>SPYbitech Chatbot</h3>
+            <span class="close-btn" onclick="toggleChatbot()">&times;</span>
+        </div>
+        <div class="chatbot-body" id="chatbot-body">
+            <p class="bot-message">Welcome to SPYbitech! How can I assist you today?</p>
+        </div>
+        <div class="chatbot-footer">
+            <input type="text" id="user-input" placeholder="Type your question here...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+</div>
 
-    </body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<script src="/chatbot.js"></script>
+</body>
 </html>

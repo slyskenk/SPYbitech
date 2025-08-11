@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About SPYbitech</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/about.css">
+    <link rel="stylesheet" href="/styles/chatbot.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -12,7 +14,7 @@
     <header class="header">
         <div class="container header-container">
             <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="SPYbitech Logo">
+                <img src="/images/logo.png" alt="SPYbitech Logo">
             </a>
             <nav class="main-nav">
                 <ul>
@@ -50,7 +52,7 @@
                     <a href="#" class="btn-get-in-touch">Get in touch <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="about-image">
-                    <img src="images/about-image.jpg" alt="A person working in a futuristic digital environment">
+                    <img src="/images/Futuristic Focus in a Digital Workspace.png" alt="A person working in a futuristic digital environment">
                 </div>
             </div>
         </section>
@@ -96,10 +98,10 @@
         <div class="container footer-grid">
             <div class="footer-col about-col">
                 <a href="#" class="logo">
-                    <img src="images/logo.png" alt="SPYbitech Logo">
+                    <img src="/images/logo.png" alt="SPYbitech Logo">
                 </a>
                 <p class="about-text">
-                    Shape up your site with Knopp, a theme especially made for fitness & gym websites.
+                    Shape up your site with SPYbitech, a theme especially made for all Websites and Software Endeavours.
                 </p>
             </div>
             <div class="footer-col">
@@ -109,8 +111,8 @@
             </div>
             <div class="footer-col">
                 <h3>LOCATION</h3>
-                <p>68 Jay Street, Brooklyn,<br>NY 11201, United States</p>
-                <p>kropp@oodeinteractive.com<br>+ (1) 718 - 407 - 6400</p>
+                <p>Unit 6, 1st Floor Independence Acarde Building,<br>Werner List Street, Windhoek</p>
+                <p>info@spybitech.com.na<br>+264 85 806 5994</p>
             </div>
             <div class="footer-col">
                 <h3>START NOW</h3>
@@ -128,9 +130,30 @@
             </div>
         </div>
         <p class="email-note">
-            PLEASE FEEL FREE TO SEND US AN E-MAIL AT KROPP@OODEINTERACTIVE.COM FOR ANY ADDITIONAL INQUIRIES
+            PLEASE FEEL FREE TO SEND US AN E-MAIL AT info@spybitech.com.na FOR ANY ADDITIONAL INQUIRIES
         </p>
     </footer>
+<div class="chatbot-container">
+    <div class="chatbot-icon" onclick="toggleChatbot()">
+        <i class="fas fa-comment-dots"></i>
+    </div>
+    <div class="chatbot-popup" id="chatbot-popup">
+        <div class="chatbot-header">
+            <img src="/images/logo.png" alt="SPYbitech Logo" style="height: 30px; margin-right: 10px;">
+            <h3>SPYbitech Chatbot</h3>
+            <span class="close-btn" onclick="toggleChatbot()">&times;</span>
+        </div>
+        <div class="chatbot-body" id="chatbot-body">
+            <p class="bot-message">Welcome to SPYbitech! How can I assist you today?</p>
+        </div>
+        <div class="chatbot-footer">
+            <input type="text" id="user-input" placeholder="Type your question here...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+</div>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<script src="/chatbot.js"></script>
     </body>
 </html>

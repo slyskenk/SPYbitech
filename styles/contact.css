@@ -1,0 +1,103 @@
+/* Contact CSS File: contact.css */
+
+.map-section {
+    padding-bottom: 0;
+}
+
+.world-map {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.world-map img {
+    max-width: 100%;
+    height: auto;
+}
+
+.contact-form-section {
+    padding-top: 0;
+}
+
+.contact-form-container {
+    background-color: #1f2228;
+    padding: 60px;
+    border-radius: 12px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-form-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.contact-form-header p {
+    color: var(--light-gray);
+    margin-bottom: 40px;
+}
+
+.contact-form .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form .form-group label {
+    display: none; /* Hide labels as per design, using placeholders */
+}
+
+.contact-form input,
+.contact-form textarea {
+    background: none;
+    border: 1px solid var(--border-color);
+    padding: 15px 20px;
+    color: var(--text-color);
+    font-size: 1rem;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--light-gray);
+    opacity: 0.7;
+}
+
+/* Specific styling for the 'Get in touch' button on the contact form */
+.contact-form .btn-get-in-touch {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 15px 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .btn-get-in-touch:hover {
+    background-color: #ff3333;
+}
+
+/* Media Queries for Desktop Layouts */
+@media (min-width: 768px) {
+    .contact-form .form-row {
+        flex-direction: row;
+    }
+    .contact-form .form-group {
+        flex: 1;
+    }
+}

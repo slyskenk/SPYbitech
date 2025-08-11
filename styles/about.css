@@ -1,0 +1,163 @@
+/* About CSS File: about.css */
+
+.about-hero {
+    padding-top: 150px; /* Adjust for fixed header */
+}
+
+.about-hero-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    text-align: left;
+}
+
+.about-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--light-gray);
+    margin-bottom: 20px;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 12px;
+}
+
+.btn-get-in-touch {
+    display: inline-block;
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.btn-get-in-touch:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.why-us-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.why-us-card {
+    background-color: #2c3e50;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: left;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    color: var(--text-color);
+}
+
+.why-us-card:hover {
+    transform: translateY(-10px);
+    background-color: #3f4756;
+}
+
+.why-us-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.why-us-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.why-us-card p {
+    color: var(--light-gray);
+    font-size: 1rem;
+}
+
+/* Stay in the Loop Section (copied to homepage for consistency) */
+.stay-in-loop {
+    background-color: #1f2228;
+    padding: 80px 0;
+}
+
+.stay-in-loop-content {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.stay-in-loop-content h3 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.stay-in-loop-content p {
+    color: var(--light-gray);
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.subscribe-form input {
+    width: 70%;
+    background: none;
+    border: 1px solid var(--border-color);
+    border-right: none;
+    padding: 15px;
+    color: var(--text-color);
+    font-size: 1rem;
+    border-radius: 8px 0 0 8px;
+}
+
+.subscribe-form button {
+    width: 30%;
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0 8px 8px 0;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-form button:hover {
+    background-color: #ff3333;
+}
+
+/* Media Queries for Desktop Layouts */
+@media (min-width: 768px) {
+    .about-hero-container {
+        flex-direction: row;
+        text-align: left;
+    }
+    .about-content {
+        flex: 1;
+        padding-right: 40px;
+    }
+    .about-image {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .why-us-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

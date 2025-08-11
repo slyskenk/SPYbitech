@@ -1,0 +1,178 @@
+/* Homepage Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.hero-logo {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.hero-slogan {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+/* Services Overview Section on Homepage */
+.homepage-services {
+    background-color: #1a1a1a;
+}
+
+.homepage-services .services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.homepage-services .service-card {
+    padding: 40px 30px;
+    background-color: #2c3e50;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.homepage-services .service-card:hover {
+    transform: translateY(-10px);
+    background-color: #3f4756;
+}
+
+.homepage-services .service-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.homepage-services .service-card p {
+    color: var(--light-gray);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.btn-read-more {
+    display: inline-block;
+    color: var(--primary-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.btn-read-more:hover {
+    color: #ff3333;
+}
+
+/* Testimonials Section - Refined */
+.testimonials {
+    padding-top: 50px;
+}
+
+.testimonial-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.testimonial-card {
+    background-color: #1f2228;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: left;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    background-color: #2c3e50;
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: var(--light-gray);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+/* Stay in the Loop Section */
+.stay-in-loop {
+    background-color: #1f2228;
+    padding: 80px 0;
+}
+
+.stay-in-loop-content {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.stay-in-loop-content h3 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.stay-in-loop-content p {
+    color: var(--light-gray);
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.subscribe-form input {
+    width: 70%;
+    background: none;
+    border: 1px solid var(--border-color);
+    border-right: none;
+    padding: 15px;
+    color: var(--text-color);
+    font-size: 1rem;
+    border-radius: 8px 0 0 8px;
+}
+
+.subscribe-form button {
+    width: 30%;
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0 8px 8px 0;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-form button:hover {
+    background-color: #ff3333;
+}
+
+/* Media Queries for Desktop Layouts */
+@media (min-width: 768px) {
+    .homepage-services .services-grid,
+    .testimonial-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero-homepage h1 {
+        font-size: 4rem;
+    }
+}

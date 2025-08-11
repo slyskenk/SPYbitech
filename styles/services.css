@@ -1,0 +1,331 @@
+/* Services CSS File: services.css */
+
+.services-grid,
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.service-card,
+.pricing-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    text-align: left;
+    padding: 40px;
+    transition: all 0.3s ease;
+    box-shadow: var(--card-shadow);
+}
+.service-card {
+    display: flex; /* Make the card a flex container */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Align items to the top */
+    height: 100%; /* Ensure all cards are the same height */
+}
+.service-card:hover,
+.pricing-card:hover {
+    transform: translateY(-10px);
+    background-color: var(--hover-color);
+}
+
+.service-icon {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    animation: pulse 2s infinite;
+}
+
+.service-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: var(--light-gray);
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.service-card .features-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+    color: var(--light-gray);
+    text-align: left;
+}
+
+.service-card .features-list li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.service-card .features-list li i {
+    color: var(--primary-color);
+    margin-right: 10px;
+    font-size: 0.8rem;
+}
+
+.btn-get-quote,
+.btn-get-started {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    border: none;
+    margin-top: auto; /* This pushes the button to the bottom */
+}
+
+.btn-get-quote:hover,
+.btn-get-started:hover {
+    background-color: #ff3333;
+}
+
+/* Design Offerings Section */
+.design-offerings {
+    background-color: var(--background-color);
+}
+
+.design-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.design-link-btn {
+    background-color: var(--card-bg);
+    color: var(--light-gray);
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--card-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.design-link-btn:hover {
+    transform: translateY(-5px);
+    background-color: var(--hover-color);
+    color: var(--primary-color);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.design-link-btn i {
+    font-size: 1.8rem;
+}
+
+/* Web Hosting Prices Section */
+.pricing-card .price {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+.pricing-card .price span {
+    font-size: 1rem;
+    color: var(--light-gray);
+    display: block;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.pricing-card h3 {
+    text-align: center;
+}
+.pricing-card .features-list {
+    text-align: left;
+}
+.pricing-card .features-list li {
+    font-size: 0.95rem;
+}
+/* Ensure pricing card buttons are also at the bottom */
+.pricing-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+}
+.pricing-card .btn-get-quote {
+    margin-top: auto;
+}
+
+
+/* Domain Registration Section */
+.domain-registration {
+    background-color: var(--background-color);
+}
+
+.domain-tables-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 30px auto 0;
+}
+
+.domain-table {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--card-border);
+    padding: 30px;
+}
+
+.domain-table h3 {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.domain-list {
+    list-style: none;
+    padding: 0;
+}
+
+.domain-list li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.domain-list li:last-child {
+    border-bottom: none;
+}
+
+.domain {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--text-color);
+    flex-basis: 100%;
+    margin-bottom: 10px;
+}
+
+.pricing-info {
+    flex-grow: 1;
+    text-align: left;
+    margin-right: 15px;
+}
+
+.price {
+    display: inline;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.renewal,
+.markup {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: var(--light-gray);
+    margin-left: 10px;
+}
+
+.btn-register {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+    border: none;
+    margin-top: 10px;
+}
+
+.btn-register:hover {
+    background-color: #ff3333;
+}
+
+.btn-register.inactive {
+    background-color: var(--border-color);
+    cursor: not-allowed;
+    color: var(--light-gray);
+}
+
+.btn-register.inactive:hover {
+    background-color: var(--border-color);
+}
+
+.domain-list.international .pricing-info {
+    text-align: right;
+}
+
+.domain-list.international .markup {
+    margin-top: 5px;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Media Queries for larger screens */
+@media (min-width: 768px) {
+    .domain-tables-container {
+        flex-direction: row;
+        gap: 30px;
+    }
+    .domain-table {
+        flex: 1;
+    }
+    
+    .domain-list li {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr auto;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: nowrap;
+    }
+
+    .domain {
+        flex-basis: auto;
+        margin-bottom: 0;
+    }
+    
+    .pricing-info {
+        text-align: right;
+        margin-right: 0;
+    }
+    
+    .price {
+        display: block;
+    }
+
+    .renewal,
+    .markup {
+        font-size: 0.8rem;
+        display: block;
+        text-align: right;
+        margin-left: 0;
+    }
+    
+    .btn-register {
+        margin-top: 0;
+    }
+}
