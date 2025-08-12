@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SPYMAIL - Login & Sign Up</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/spymail.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="/images/logo.png" alt="SPYbitech Logo" />
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="#" class="active">SPYMAIL</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn-book">BOOK NOW</a>
+                <button class="menu-toggle" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <section class="breadcrumb-container">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html">HOME</a> / <span class="active">SPYMAIL</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="auth-section section-padded">
+            <div class="container auth-container-wrapper">
+                <div class="auth-container">
+                    <form id="login-form" novalidate>
+                        <h2 class="form-heading">Login</h2>
+                        <p class="form-subheading">Welcome back to SPYMAIL.</p>
+                        <input
+                          type="email"
+                          id="login-email"
+                          name="email"
+                          class="form-input"
+                          placeholder="Email"
+                          required
+                        />
+                        <input
+                          type="password"
+                          id="login-password"
+                          name="password"
+                          class="form-input"
+                          placeholder="Password"
+                          required
+                        />
+                        <p id="login-error-message" class="error-message"></p>
+                        <button type="submit" class="form-btn">Login</button>
+                        <p class="form-toggle-link">
+                            Don't have an account?
+                            <a href="#" onclick="showSignUp()">Sign Up</a>
+                        </p>
+                    </form>
+
+                    <form id="signup-form" class="hidden" novalidate>
+                        <h2 class="form-heading">Sign Up</h2>
+                        <p class="form-subheading">Create your SPYMAIL account.</p>
+                        <input
+                          type="text"
+                          id="signup-name"
+                          name="name"
+                          class="form-input"
+                          placeholder="Full Name"
+                          required
+                        />
+                        <input
+                          type="email"
+                          id="signup-email"
+                          name="email"
+                          class="form-input"
+                          placeholder="Email"
+                          required
+                        />
+                        <input
+                          type="password"
+                          id="signup-password"
+                          name="password"
+                          class="form-input"
+                          placeholder="Password"
+                          required
+                        />
+                        <p id="signup-error-message" class="error-message"></p>
+                        <button type="submit" class="form-btn">Sign Up</button>
+                        <p class="form-toggle-link">
+                            Already have an account?
+                            <a href="#" onclick="showLogin()">Login</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col about-col">
+                <a href="#" class="logo">
+                    <img src="/images/logo.png" alt="SPYbitech Logo" />
+                </a>
+                <p class="about-text">
+                    Shape up your site with SPYbitech, a theme especially made for all Websites and Software Endeavours.
+                </p>
+            </div>
+            <div class="footer-col">
+                <h3>WORKING HOURS</h3>
+                <p>
+                    Monday - Friday<br />
+                    09:30 - 24:00
+                </p>
+                <p>
+                    Weekdays<br />
+                    09:00 - 24:00
+                </p>
+            </div>
+            <div class="footer-col">
+                <h3>LOCATION</h3>
+                <p>
+                    Unit 6, 1st Floor Independence Acarde Building,<br />
+                    Werner List Street, Windhoek
+                </p>
+                <p>
+                    info@spybitech.com.na<br />
+                    +264 85 806 5994
+                </p>
+            </div>
+            <div class="footer-col">
+                <h3>START NOW</h3>
+                <div class="subscribe-form">
+                    <input type="email" placeholder="Email" />
+                    <button><i class="fas fa-arrow-right"></i></button>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="email-note">
+            PLEASE FEEL FREE TO SEND US AN E-MAIL AT info@spybitech.com.na FOR ANY ADDITIONAL INQUIRIES
+        </p>
+    </footer>
+
+    <script>
+        const loginForm = document.getElementById("login-form");
+        const signupForm = document.getElementById("signup-form");
+        const loginErrorMessage = document.getElementById("login-error-message");
+        const signupErrorMessage = document.getElementById("signup-error-message");
+
+        // Function to toggle form visibility
+        window.showLogin = () => {
+            loginForm.classList.remove("hidden");
+            signupForm.classList.add("hidden");
+            loginErrorMessage.innerText = "";
+            signupErrorMessage.innerText = "";
+        };
+
+        window.showSignUp = () => {
+            loginForm.classList.add("hidden");
+            signupForm.classList.remove("hidden");
+            loginErrorMessage.innerText = "";
+            signupErrorMessage.innerText = "";
+        };
+
+        const displayMessage = (messageEl, text, isSuccess) => {
+            messageEl.innerText = text;
+            messageEl.style.color = isSuccess ? "#fff" : "red";
+        };
+
+        // Handle Login form submit
+        loginForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const email = document.getElementById("login-email").value.trim();
+            const password = document.getElementById("login-password").value;
+
+            try {
+                const res = await fetch("http://localhost:3000/login", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ email, password }),
+                });
+
+                const data = await res.json();
+
+                if (!res.ok) {
+                    displayMessage(loginErrorMessage, data.error || "Login failed", false);
+                } else {
+                    displayMessage(loginErrorMessage, "", true);
+                    alert(`Welcome back, ${data.name}!`);
+                    // TODO: redirect or update UI on success
+                }
+            } catch (err) {
+                displayMessage(loginErrorMessage, "Network error", false);
+            }
+        });
+
+        // Handle Signup form submit
+        signupForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById("signup-name").value.trim();
+            const email = document.getElementById("signup-email").value.trim();
+            const password = document.getElementById("signup-password").value;
+
+            try {
+                const res = await fetch("http://localhost:3000/signup", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ name, email, password }),
+                });
+
+                const data = await res.json();
+
+                if (!res.ok) {
+                    displayMessage(signupErrorMessage, data.error || "Signup failed", false);
+                } else {
+                    displayMessage(signupErrorMessage, "", true);
+                    alert("Account created! Please login.");
+                    showLogin();
+                }
+            } catch (err) {
+                displayMessage(signupErrorMessage, "Network error", false);
+            }
+        });
+
+        // Error message from URL params (optional)
+        const urlParams = new URLSearchParams(window.location.search);
+        const error = urlParams.get("error");
+
+        if (error) {
+            let message = "";
+            switch (error) {
+                case "incorrect_password":
+                    message = "Incorrect password.";
+                    break;
+                case "no_account_found":
+                    message = "No account found with that email.";
+                    break;
+                case "email_exists":
+                    message = "An account with this email already exists.";
+                    showSignUp();
+                    break;
+                case "signup_success":
+                    message = "Account created successfully! Please log in.";
+                    displayMessage(loginErrorMessage, message, true);
+                    showLogin();
+                    break;
+                default:
+                    message = "An unknown error occurred. Please try again.";
+            }
+            if (!message.includes("successfully")) {
+                if (urlParams.get("form") === "login") {
+                    displayMessage(loginErrorMessage, message, false);
+                } else if (urlParams.get("form") === "signup") {
+                    displayMessage(signupErrorMessage, message, false);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
