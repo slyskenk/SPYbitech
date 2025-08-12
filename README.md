@@ -1,5 +1,5 @@
-Project Title 🚀
-Welcome to [Your Project Name] — a powerful, secure, and intelligent app designed to simplify your life! This project provides secure user authentication, robust database management, and leverages cutting-edge Google Generative AI to [generate content, summarize articles, or your core AI feature]. Say goodbye to manual hassle and hello to smart automation! 💡✨
+# Project Title 🚀
+Welcome to SPYbitech — a powerful, secure, and intelligent app designed to simplify your life! This project provides secure user authentication, robust database management, and leverages cutting-edge Google Generative AI to [generate content, summarize articles, or your core AI feature]. Say goodbye to manual hassle and hello to smart automation! 💡✨
 
 Features ✨
 🔒 User Authentication
