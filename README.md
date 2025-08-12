@@ -1,6 +1,6 @@
-# SPYMAIL Backend 🚀
+# SPYbitech 🚀
 
-A secure and scalable backend for SPYMAIL — user authentication with PostgreSQL and Node.js, using bcrypt for password hashing and environment variables for security.
+A secure and scalable backend for SPYbitech — user authentication with PostgreSQL and Node.js, using bcrypt for password hashing and environment variables for security.
 
 ---
 
@@ -175,7 +175,7 @@ If you have questions or want to contribute, please reach out at: slyskenk@outlo
 
 ## License 📄
 
-MIT License © 2025 SPYbitech
+MIT License © 2025 Slysken K
 
 ---
 
