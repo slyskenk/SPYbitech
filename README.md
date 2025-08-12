@@ -155,6 +155,9 @@ curl -X POST http://localhost:3000/login \
 ## Screenshots & Visuals 🖼️
 
 ![UI Form Screenshot](screenshots/image.png)
+![UI Form Screenshot2](screenshots/image0.png)
+![UI Form Screenshot3](screenshots/image1.png)
+![UI Form Screenshot4](screenshots/image2.png)
 
 
 ---
