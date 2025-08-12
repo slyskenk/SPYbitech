@@ -1,99 +1,182 @@
-# SPYbitech🚀
-### Welcome to SPYbitech — a powerful, secure, and intelligent app designed to simplify your life! This project provides secure user authentication, robust database management, and leverages cutting-edge Google Generative AI to [generate content, summarize articles, or your core AI feature]. Say goodbye to manual hassle and hello to smart automation! 💡✨
+# SPYMAIL Backend 🚀
+
+A secure and scalable backend for SPYMAIL — user authentication with PostgreSQL and Node.js, using bcrypt for password hashing and environment variables for security.
+
+---
 
 ## Features ✨
-## 🔒User Authentication
-### Secure user registration & login with bcryptjs for hashed passwords.
 
-## 🗄️ Database Management
-### Powered by PostgreSQL for reliable and scalable user data storage.
+- **User Authentication:** Secure signup and login with hashed passwords (`bcryptjs`).
+- **Database:** PostgreSQL stores user info safely and efficiently.
+- **Environment Variables:** Keeps sensitive info like DB credentials private using `.env`.
+- **CORS Enabled:** Allows secure communication between frontend and backend.
+- **RESTful API:** Easy endpoints for `/signup` and `/login`.
 
-## 🤖 AI-Powered Content
-### Integrates Google Generative AI API to [describe your AI functionality here].
+---
 
-## 🌐 CORS Enabled
-### Allows safe cross-origin requests so your frontend and backend talk seamlessly.
+## Getting Started ⚙️
 
-## 🔐 Environment Variables
-### Keeps sensitive info like API keys and DB credentials safe in a .env file.
+### Prerequisites
 
-# Getting Started ⚙️
-## Prerequisites ✅
-### Make sure you have these installed:
+- [Node.js](https://nodejs.org/) (v18+ recommended)
+- [npm](https://www.npmjs.com/get-npm)
+- [PostgreSQL](https://www.postgresql.org/download/)
 
-### Node.js (v18 or higher recommended) 🟢
+---
 
-### npm (Node Package Manager) 📦
+### Installation
 
-### PostgreSQL database 🐘
+1. **Clone the repository:**
 
-## Installation 🚀
-### Clone the repository:
+```bash
+git https://github.com/slyskenk/SPYbitech
+```
 
-## Bash
+2. **Install dependencies:**
 
-### git clone https://github.com/slyskenk/SPYbitech
-### cd your-repository-name
-### Install dependencies:
+```bash
+npm install express @google/generative-ai cors dotenv
+npm install express pg bcryptjs cors dotenv
+```
 
-## Bash
+3. **Create a `.env` file in the project root with:**
 
-### npm install express @google/generative-ai cors dotenv pg bcryptjs body-parser
-### (Note: This single command installs all the necessary packages for your project.)
+```
+GEMINI_API_KEY=YOUR_API_KEY
+DB_USER=postgres
+DB_HOST=localhost
+DB_NAME=spymail_db
+DB_PASSWORD=your_postgres_password
+DB_PORT=5432
+PORT=3000
+```
 
-## Set up environment variables:
+> ⚠️ **Never commit `.env` to version control. Add it to `.gitignore`.**
 
-### Create a file named .env in your project's root directory.
+---
 
-### ⚠️ Security Tip: Never commit your .env file to Git! Add .env to your .gitignore to keep your sensitive data private.
+### Database Setup
 
-### Add your environment variables to the .env file, like this:
+Create the database and `users` table in PostgreSQL:
 
-### Ini, TOML
+```sql
+CREATE DATABASE spymail_db;
 
-### PORT=3000
-### DATABASE_URL=your_postgresql_connection_string
-### GOOGLE_GEN_AI_API_KEY=your_google_generative_ai_api_key
-### Database Setup 🐘
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(255) UNIQUE NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
 
-### Ensure your PostgreSQL server is running.
+---
 
-### Use a tool like pgAdmin or the psql command line to create the necessary tables for your application. Here's an example schema for a users table:
+### Running the Server
 
-### SQL
+Start your backend server by opening terminal:
 
-### CREATE TABLE users (
-###  id SERIAL PRIMARY KEY,
-###  name VARCHAR(100) NOT NULL,
-###  email VARCHAR(255) UNIQUE NOT NULL,
-###  password VARCHAR(255) NOT NULL,
-###  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-### );
-### Run the Application ▶️
+```bash
+node index.js
+```
 
-## Start your backend server with:
+You should see:
 
-### Bash
+```
+DB password type: string
+Backend running on http://localhost:3000
+```
 
-### cd backend node index.js
-### (Replace index.js with the name of your main server file.)
+---
 
-### How to Get Your API Key 🔑
-### Google Generative AI API
-### Go to Google AI Studio and log in with your Google account.
+### Running the AI CHATBOT
 
-### Click Get API key to create a new key.
+Start your Chatbot API in another terminal:
 
-### Copy the generated key.
+```bash
+node server.js
+```
 
-### Paste it into your .env file next to GOOGLE_GEN_AI_API_KEY.
+You should see:
 
-### Website Screenshots and Visuals 🖼️
-### Including screenshots or demo GIFs/videos makes your README stand out and helps users understand your app quickly!
+```
 
-Login Page
-Signup Page
-AI Content Generation in Action
-Add more screenshots as needed to highlight important features.
+Server listening at http://localhost:3000
+```
 
-### ✨ Thank you for checking out this project! Feel free to contribute or raise issues. Happy coding! 🚀
+---
+
+## API Endpoints 📡
+
+| Endpoint  | Method | Description                  | Request Body                            |
+|-----------|--------|------------------------------|----------------------------------------|
+| `/signup` | POST   | Register a new user          | `{ name, email, password }`            |
+| `/login`  | POST   | Authenticate user credentials | `{ email, password }`                   |
+
+---
+
+### Example Signup Request (curl)
+
+```bash
+curl -X POST http://localhost:3000/signup \
+-H "Content-Type: application/json" \
+-d '{"name":"Alice","email":"alice@example.com","password":"mypassword"}'
+```
+
+---
+
+### Example Login Request (curl)
+
+```bash
+curl -X POST http://localhost:3000/login \
+-H "Content-Type: application/json" \
+-d '{"email":"alice@example.com","password":"mypassword"}'
+```
+
+---
+
+## Frontend Integration 💻
+
+- Use `fetch()` or any AJAX method to send POST requests to `/signup` and `/login`.
+- Handle success and error responses accordingly.
+
+---
+
+## Security Notes 🔒
+
+- Passwords are hashed before storage — never store plaintext passwords.
+- Use HTTPS in production to secure data in transit.
+- Keep your `.env` file secret.
+- Consider adding JWT or sessions for authentication after login.
+
+---
+
+## Screenshots & Visuals 🖼️
+
+![UI Form Screenshot](screenshots/image.png)
+
+
+---
+
+## Troubleshooting 🛠️
+
+- **`DB password type: undefined`**: Check `.env` placement and `dotenv` config.
+- **Database connection errors**: Verify credentials and that PostgreSQL server is running.
+- **API errors**: Use Postman or browser dev tools to inspect request/response.
+
+---
+
+## Contact ✉️
+
+If you have questions or want to contribute, please reach out at: slyskenk@outlook.com
+
+---
+
+## License 📄
+
+MIT License © 2025 SPYbitech
+
+---
+
+*Happy coding! 🚀*

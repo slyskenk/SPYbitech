@@ -1,4 +1,6 @@
 // index.js
+require('dotenv').config();
+
 const express = require('express');
 const cors = require('cors');
 const bcrypt = require('bcryptjs');
@@ -13,12 +15,14 @@ app.use(express.json()); // Parse JSON bodies
 
 // PostgreSQL connection pool
 const pool = new Pool({
-  user: 'postgres',          // your DB user
-  host: 'localhost',
-  database: 'spymail_db',
-  password: 'Jr71234567',  // your DB password
-  port: 5432,
+  user: process.env.DB_USER,
+  host: process.env.DB_HOST,
+  database: process.env.DB_NAME,
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT,
 });
+
+console.log('DB password type:', typeof process.env.DB_PASSWORD);
 
 // Signup endpoint
 app.post('/signup', async (req, res) => {
