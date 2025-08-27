@@ -37,7 +37,7 @@ async function sendMessage() {
     try {
         console.log('Sending message to server:', userMessage); // Debug log
 
-        const response = await fetch('http://localhost:3000/chat', {
+        const response = await fetch('http://localhost:3001/chat', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
