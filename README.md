@@ -82,7 +82,7 @@ node index.js
 ```
 
 You should see:
-
+![Terminal Screenshot](screenshots/terminal1.png)
 ```
 DB password type: string
 Backend running on http://localhost:3000
@@ -99,10 +99,11 @@ node server.js
 ```
 
 You should see:
+![Terminal Screenshot](screenshots/terminal2.png)
 
 ```
 
-Server listening at http://localhost:3000
+Server listening at http://localhost:3001
 ```
 
 ---
